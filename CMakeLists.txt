@@ -12,6 +12,8 @@ option(QCLOUDMUSICAPI_BUILD_SHARED "Build QCloudMusicApi as a shared library" ON
 include_directories(3rdparty)
 set(CRYPTOPP_BUILD_TESTING OFF)
 set(CRYPTOPP_USE_MASTER_BRANCH ON)
+set(FETCHCONTENT_UPDATES_DISCONNECTED_CRYPTOPP ON
+    CACHE BOOL "Disable Crypto++ FetchContent updates" FORCE)
 add_subdirectory(3rdparty/cryptopp-cmake/)
 
 add_subdirectory(QCloudMusicApi)
